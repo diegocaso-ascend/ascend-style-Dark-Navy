@@ -1,3 +1,11 @@
 {
-  "clients": []
+  "clients": [
+    {
+      "accountId": "iDUr2MwTthlXZHzvf8Bp",
+      "locationId": "iDUr2MwTthlXZHzvf8Bp",
+      "theme": 3,
+      "themeName": "Dark Navy",
+      "timestamp": "2026-05-17T00:13:09.375Z"
+    }
+  ]
 }
