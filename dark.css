@@ -3,13 +3,13 @@
    Paleta: Azul marino oscuro con acentos azul grisáceo
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap');
 
 :root {
-  --mr-dark:  #1E2235;
-  --mr-mid:   #7A8BA5;
-  --mr-light: #9AAABB;
-  --mr-pale:  #EEF1F5;
+  --mr-dark:   #1E2235;
+  --mr-mid:    #7A8BA5;
+  --mr-light:  #9AAABB;
+  --mr-pale:   #EEF1F5;
 }
 
 body, p, label, input, button, a, h1, h2, h3,
@@ -310,14 +310,25 @@ select.removeShadow,
     margin-bottom: 6px !important;
     transition: all 0.25s ease !important;
 }
+
+/* CORRECCIÓN HOVER CUENTAS: Asegura fondo claro y fuerza letras/iconos oscuros */
 .hl_account:hover {
     background: var(--mr-pale) !important;
     transform: translateX(3px) !important;
     box-shadow: 0 2px 12px rgba(154, 170, 187, 0.2) !important;
 }
+
+.hl_account:hover *,
 .hl_account:hover .hl_location-recent,
 .hl_account:hover .hl_location-title,
-.hl_account:hover span { color: var(--mr-dark) !important; }
+.hl_account:hover span,
+.hl_account:hover div,
+.hl_account:hover p,
+.hl_account:hover i,
+.hl_account:hover svg { 
+    color: var(--mr-dark) !important; 
+    fill: var(--mr-dark) !important;
+}
 
 .hl_location-recent,
 .hl_location-title {
