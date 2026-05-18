@@ -3,7 +3,7 @@
    Paleta: Azul marino oscuro con acentos azul grisáceo
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --mr-dark:   #1E2235;
@@ -106,7 +106,6 @@ select.removeShadow,
 }
 
 .hl_login .form-group { margin-bottom: 15px !important; }
-
 .hl_login .divider { display: none !important; }
 
 .hl_login .form-control,
@@ -197,10 +196,18 @@ select.removeShadow,
     border-right: 1px solid rgba(154, 170, 187, 0.1) !important;
 }
 
-#sidebar-v2 ::-webkit-scrollbar { width: 6px !important; }
-#sidebar-v2 ::-webkit-scrollbar-track { background: transparent !important; }
-#sidebar-v2 ::-webkit-scrollbar-thumb { background: var(--mr-mid) !important; border-radius: 10px !important; }
-#sidebar-v2 ::-webkit-scrollbar-thumb:hover { background: var(--mr-light) !important; }
+#sidebar-v2 ::-webkit-scrollbar,
+.hl_v2-location_switcher ::-webkit-scrollbar,
+.lead-connector ::-webkit-scrollbar { width: 6px !important; }
+#sidebar-v2 ::-webkit-scrollbar-track,
+.hl_v2-location_switcher ::-webkit-scrollbar-track,
+.lead-connector ::-webkit-scrollbar-track { background: transparent !important; }
+#sidebar-v2 ::-webkit-scrollbar-thumb,
+.hl_v2-location_switcher ::-webkit-scrollbar-thumb,
+.lead-connector ::-webkit-scrollbar-thumb { background: var(--mr-mid) !important; border-radius: 10px !important; }
+#sidebar-v2 ::-webkit-scrollbar-thumb:hover,
+.hl_v2-location_switcher ::-webkit-scrollbar-thumb:hover,
+.lead-connector ::-webkit-scrollbar-thumb:hover { background: var(--mr-light) !important; }
 
 #backButtonv2 {
     background-color: rgba(154, 170, 187, 0.07) !important;
@@ -213,10 +220,7 @@ select.removeShadow,
     background-color: var(--mr-pale) !important;
     border-color: var(--mr-pale) !important;
 }
-#backButtonv2 i, #backButtonv2 span {
-    color: var(--mr-light) !important;
-    transition: color 0.25s ease !important;
-}
+#backButtonv2 i, #backButtonv2 span { color: var(--mr-light) !important; transition: color 0.25s ease !important; }
 #backButtonv2:hover i, #backButtonv2:hover span { color: var(--mr-dark) !important; }
 
 #sidebar-v2 .menu-title {
@@ -227,18 +231,23 @@ select.removeShadow,
     margin-bottom: 10px !important;
 }
 
+/* LOCATION SWITCHER — solo borde más grueso en hover, sin cambio de fondo */
 #location-switcher-sidbar-v2 {
     background-color: rgba(154, 170, 187, 0.04) !important;
     border: 1px solid rgba(154, 170, 187, 0.15) !important;
     border-radius: 10px !important;
-    transition: all 0.25s ease !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
 #location-switcher-sidbar-v2:hover {
-    background-color: var(--mr-pale) !important;
+    background-color: rgba(154, 170, 187, 0.04) !important;
+    border: 2px solid rgba(154, 170, 187, 0.5) !important;
+    box-shadow: 0 2px 8px rgba(154, 170, 187, 0.1) !important;
 }
-#location-switcher-sidbar-v2:hover span,
-#location-switcher-sidbar-v2:hover div { color: var(--mr-dark) !important; }
+#location-switcher-sidbar-v2 span,
+#location-switcher-sidbar-v2 i,
+#location-switcher-sidbar-v2 div { color: var(--mr-pale) !important; }
 
+/* NAV LINKS */
 #sidebar-v2 nav a {
     transition: all 0.25s ease !important;
     border-radius: 8px !important;
@@ -252,6 +261,14 @@ select.removeShadow,
     transition: all 0.25s ease !important;
 }
 
+/* SVGs e íconos — visibles en estado normal */
+#sidebar-v2 nav a svg,
+#sidebar-v2 nav a img {
+    filter: brightness(0) invert(0.65) !important;
+    transition: filter 0.25s ease !important;
+}
+
+/* HOVER — fondo claro, texto e íconos oscuros */
 #sidebar-v2 nav a:hover {
     background-color: var(--mr-pale) !important;
     border-left-color: var(--mr-mid) !important;
@@ -262,19 +279,55 @@ select.removeShadow,
     color: var(--mr-dark) !important;
     transform: translateX(3px) !important;
 }
+#sidebar-v2 nav a:hover svg,
+#sidebar-v2 nav a:hover img {
+    filter: brightness(0) !important;
+}
 
+/* ACTIVO */
 #sidebar-v2 nav a.active,
 #sidebar-v2 nav a.exact-active {
-    background-color: rgba(238, 241, 245, 0.1) !important;
-    border-left: 3px solid var(--mr-light) !important;
+    background-color: var(--mr-pale) !important;
+    border-left: 3px solid var(--mr-mid) !important;
     box-shadow: 0 0 12px rgba(154, 170, 187, 0.12) !important;
 }
 #sidebar-v2 nav a.active span,
 #sidebar-v2 nav a.exact-active span,
 #sidebar-v2 nav a.active i,
 #sidebar-v2 nav a.exact-active i {
-    color: var(--mr-pale) !important;
+    color: var(--mr-dark) !important;
     font-weight: 700 !important;
+}
+#sidebar-v2 nav a.active svg,
+#sidebar-v2 nav a.exact-active svg,
+#sidebar-v2 nav a.active img,
+#sidebar-v2 nav a.exact-active img {
+    filter: brightness(0) !important;
+}
+
+/* BOTÓN COLAPSAR SIDEBAR — de verde a gris de paleta */
+.hl_collapse-button,
+button[aria-label="Expand sidebar"],
+button[aria-label="Collapse sidebar"] {
+    background-color: var(--mr-mid) !important;
+    border-color: var(--mr-mid) !important;
+    transition: all 0.25s ease !important;
+}
+.hl_collapse-button i,
+button[aria-label="Expand sidebar"] i,
+button[aria-label="Collapse sidebar"] i {
+    color: var(--mr-pale) !important;
+}
+.hl_collapse-button:hover,
+button[aria-label="Expand sidebar"]:hover,
+button[aria-label="Collapse sidebar"]:hover {
+    background-color: var(--mr-pale) !important;
+    border-color: var(--mr-pale) !important;
+}
+.hl_collapse-button:hover i,
+button[aria-label="Expand sidebar"]:hover i,
+button[aria-label="Collapse sidebar"]:hover i {
+    color: var(--mr-dark) !important;
 }
 
 /* ============================================================
@@ -287,6 +340,8 @@ select.removeShadow,
     box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
 }
 
+.hl_v2_tip-arrow { display: none !important; }
+
 .hl_v2-location_switcher .search-area input[type="search"] {
     background-color: rgba(154, 170, 187, 0.06) !important;
     border: 1px solid rgba(154, 170, 187, 0.15) !important;
@@ -295,6 +350,10 @@ select.removeShadow,
 }
 .hl_v2-location_switcher .search-area input[type="search"]:focus {
     border-color: var(--mr-light) !important;
+    outline: none !important;
+}
+.hl_v2-location_switcher .search-area input[type="search"]::placeholder {
+    color: rgba(154, 170, 187, 0.5) !important;
 }
 
 .hl_swicher-heading {
@@ -303,31 +362,35 @@ select.removeShadow,
     border-bottom: 1px solid rgba(122, 139, 165, 0.2) !important;
 }
 
+/* Textos del dropdown — claros por defecto */
+.hl_v2-location_switcher * { color: var(--mr-pale) !important; }
+
+/* CUENTAS — hover solo borde más grueso, sin cambio de fondo a blanco */
 .hl_account {
     border-radius: 8px !important;
     padding: 8px !important;
     border: 1px solid rgba(154, 170, 187, 0.1) !important;
     margin-bottom: 6px !important;
-    transition: all 0.25s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
 }
-
-/* CORRECCIÓN HOVER CUENTAS: Asegura fondo claro y fuerza letras/iconos oscuros */
 .hl_account:hover {
-    background: var(--mr-pale) !important;
+    background: rgba(154, 170, 187, 0.08) !important;
+    border: 2px solid rgba(154, 170, 187, 0.5) !important;
     transform: translateX(3px) !important;
-    box-shadow: 0 2px 12px rgba(154, 170, 187, 0.2) !important;
+    box-shadow: 0 2px 8px rgba(154, 170, 187, 0.1) !important;
 }
 
+/* Forzar textos claros en hover — NO oscuros */
 .hl_account:hover *,
 .hl_account:hover .hl_location-recent,
 .hl_account:hover .hl_location-title,
 .hl_account:hover span,
 .hl_account:hover div,
 .hl_account:hover p,
-.hl_account:hover i,
-.hl_account:hover svg { 
-    color: var(--mr-dark) !important; 
-    fill: var(--mr-dark) !important;
+.hl_account:hover i {
+    color: var(--mr-pale) !important;
 }
 
 .hl_location-recent,
@@ -342,6 +405,24 @@ select.removeShadow,
     border: 1px solid rgba(122, 139, 165, 0.4) !important;
 }
 
+/* BOTÓN CAMBIAR A VISTA DE AGENCIA */
+.hl_v2-location_switcher div.cursor-pointer {
+    transition: background 0.2s ease, border-color 0.2s ease !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    margin-bottom: 8px !important;
+    border: 1px solid rgba(154, 170, 187, 0.15) !important;
+}
+.hl_v2-location_switcher div.cursor-pointer:hover {
+    background: rgba(154, 170, 187, 0.1) !important;
+    border-color: var(--mr-light) !important;
+}
+.hl_v2-location_switcher div.cursor-pointer *,
+.hl_v2-location_switcher div.cursor-pointer.font-medium,
+.hl_v2-location_switcher div.cursor-pointer.font-medium * {
+    color: var(--mr-pale) !important;
+}
+
 /* ============================================================
    TOPBAR
    ============================================================ */
@@ -352,10 +433,40 @@ select.removeShadow,
 
 .hl_header .btn-circle,
 .hl_header .feedback-toggle-btn,
-.hl_header button.rounded-full {
+.hl_header button.rounded-full,
+.hl_header a[role="button"] {
     background: var(--mr-mid) !important;
+    background-color: var(--mr-mid) !important;
     border: none !important;
     transition: all 0.25s ease !important;
+    --tw-ring-shadow: 0 0 #0000 !important;
+    --tw-ring-offset-shadow: 0 0 #0000 !important;
+}
+
+/* TELÉFONO */
+.hl_header button[aria-label="Llamada de voz"],
+.hl_header button.bg-success-600 {
+    background: var(--mr-mid) !important;
+    background-color: var(--mr-mid) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    transition: all 0.25s ease !important;
+}
+.hl_header button[aria-label="Llamada de voz"] svg,
+.hl_header button.bg-success-600 svg {
+    color: var(--mr-pale) !important;
+    stroke: var(--mr-pale) !important;
+}
+.hl_header button[aria-label="Llamada de voz"]:hover,
+.hl_header button.bg-success-600:hover {
+    background: var(--mr-pale) !important;
+    background-color: var(--mr-pale) !important;
+    transform: translateY(-2px) !important;
+}
+.hl_header button[aria-label="Llamada de voz"]:hover svg,
+.hl_header button.bg-success-600:hover svg {
+    color: var(--mr-dark) !important;
+    stroke: var(--mr-dark) !important;
 }
 
 #hl_header--help-icon {
@@ -363,34 +474,120 @@ select.removeShadow,
     box-shadow: inset 0 0 0 50px var(--mr-mid) !important;
     border: 2px solid var(--mr-mid) !important;
     border-radius: 50% !important;
+    --tw-ring-shadow: 0 0 #0000 !important;
 }
 
-.hl_header .btn-circle i {
+#hl_header--copilot-icon {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: visible !important;
+    outline: none !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    --tw-ring-shadow: 0 0 #0000 !important;
+    transform: none !important;
+}
+
+.hl_header .btn-circle:not(#hl_header--copilot-icon) i,
+.hl_header .feedback-toggle-icon,
+#hl_header--help-icon i {
     color: var(--mr-pale) !important;
+    fill: var(--mr-pale) !important;
+}
+.hl_header .btn-circle:not(#hl_header--copilot-icon) svg path,
+.hl_header button.rounded-full svg path {
+    fill: var(--mr-pale) !important;
+    stroke: var(--mr-pale) !important;
 }
 
-.hl_header .btn-circle:hover {
+.hl_header .btn-circle:not(#hl_header--copilot-icon):hover,
+.hl_header .feedback-toggle-btn:hover,
+.hl_header button.rounded-full:hover,
+.hl_header a[role="button"]:not(#hl_header--copilot-icon):hover {
     background: var(--mr-pale) !important;
+    background-color: var(--mr-pale) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 4px 14px rgba(30, 34, 53, 0.25) !important;
 }
-.hl_header .btn-circle:hover i {
+.hl_header .btn-circle:not(#hl_header--copilot-icon):hover i,
+.hl_header .feedback-toggle-btn:hover .feedback-toggle-icon {
     color: var(--mr-dark) !important;
+}
+.hl_header .btn-circle:not(#hl_header--copilot-icon):hover svg path,
+.hl_header button.rounded-full:hover svg path {
+    fill: var(--mr-dark) !important;
+    stroke: var(--mr-dark) !important;
 }
 
 #hl_header--help-icon:hover {
     box-shadow: inset 0 0 0 50px var(--mr-pale) !important;
     border-color: var(--mr-pale) !important;
+    transform: translateY(-2px) !important;
+}
+#hl_header--help-icon:hover i { color: var(--mr-dark) !important; }
+
+/* COPILOT — preservar gradiente SVG */
+.hl_header #hl_header--copilot-icon,
+#hl_header--copilot-icon[style] {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: inset 0 0 0 4px var(--mr-dark) !important;
+    border: none !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    outline: none !important;
+}
+.hl_header #hl_header--copilot-icon svg {
+    color: transparent !important;
+    fill: transparent !important;
+    filter: none !important;
+    overflow: visible !important;
+    display: block !important;
+}
+.hl_header #hl_header--copilot-icon svg rect:first-of-type {
+    fill: url(#paint0_linear_9387_167087) !important;
+    stroke: none !important;
+}
+.hl_header #hl_header--copilot-icon svg rect:last-of-type {
+    fill: none !important;
+    stroke: #3E1C96 !important;
+    stroke-opacity: 1 !important;
+}
+.hl_header #hl_header--copilot-icon svg path { fill: #ffffff !important; stroke: none !important; }
+.hl_header #hl_header--copilot-icon:hover {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    transform: none !important;
+    opacity: 0.85 !important;
 }
 
 .hl_header .Canny_Badge,
 .hl_header .bg-danger {
     background-color: var(--mr-mid) !important;
+    border: 2px solid var(--mr-dark) !important;
 }
 
+.hl_header .avatar,
+.hl_header .hl_header--avatar {
+    border: none !important;
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 50% !important;
+    --tw-ring-shadow: 0 0 #0000 !important;
+}
 .hl_header .avatar .avatar_img {
     background-color: var(--mr-mid) !important;
     color: var(--mr-pale) !important;
+    border-radius: 50% !important;
+    border: none !important;
     transition: all 0.25s ease !important;
 }
 .hl_header .avatar:hover .avatar_img {
@@ -399,13 +596,20 @@ select.removeShadow,
 }
 
 /* ============================================================
-   SCROLLBARS
+   SCROLLBARS DASHBOARD
    ============================================================ */
 #location-dashboard::-webkit-scrollbar,
-.n-scrollbar::-webkit-scrollbar { width: 6px !important; }
+#dashboard-wrapper::-webkit-scrollbar,
+.location-dashboard-wrapper::-webkit-scrollbar,
+.n-scrollbar::-webkit-scrollbar { width: 6px !important; height: 6px !important; }
+#location-dashboard::-webkit-scrollbar-track,
+#dashboard-wrapper::-webkit-scrollbar-track,
+.n-scrollbar::-webkit-scrollbar-track { background: transparent !important; }
 #location-dashboard::-webkit-scrollbar-thumb,
+#dashboard-wrapper::-webkit-scrollbar-thumb,
 .n-scrollbar::-webkit-scrollbar-thumb { background: var(--mr-mid) !important; border-radius: 10px !important; }
 #location-dashboard::-webkit-scrollbar-thumb:hover,
+#dashboard-wrapper::-webkit-scrollbar-thumb:hover,
 .n-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--mr-light) !important; }
 
 /* ============================================================
@@ -427,13 +631,11 @@ select.removeShadow,
     background-color: var(--mr-pale) !important;
     border-color: var(--mr-mid) !important;
 }
-.n-checkbox.n-checkbox--checked .n-checkbox-box .n-checkbox-icon {
-    color: var(--mr-dark) !important;
-}
+.n-checkbox.n-checkbox--checked .n-checkbox-box .n-checkbox-icon { color: var(--mr-dark) !important; }
 input[type="checkbox"] { accent-color: var(--mr-mid) !important; }
 
 /* ============================================================
-   BOTONES
+   BOTONES NAIVE UI
    ============================================================ */
 .n-button--primary-type {
     background-color: var(--mr-mid) !important;
@@ -446,21 +648,20 @@ input[type="checkbox"] { accent-color: var(--mr-mid) !important; }
 }
 
 /* ============================================================
-   BUSCADOR GLOBAL
+   BUSCADOR GLOBAL Y QUICK ACTIONS
    ============================================================ */
 #globalSearchOpener {
     background-color: rgba(30, 34, 53, 0.8) !important;
     border: 1px solid rgba(122, 139, 165, 0.35) !important;
     border-radius: 8px !important;
 }
-#globalSearchOpener:hover {
-    border-color: var(--mr-light) !important;
-}
+#globalSearchOpener:hover { border-color: var(--mr-light) !important; }
 #globalSearchOpener .search-placeholder { color: var(--mr-light) !important; }
 
 #quickActions {
     background-color: var(--mr-mid) !important;
     border-radius: 8px !important;
+    transition: all 0.25s ease !important;
 }
 #quickActions:hover { background-color: var(--mr-light) !important; }
 #quickActions img, #quickActions span { filter: brightness(0) invert(1) !important; }
