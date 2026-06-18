@@ -666,3 +666,34 @@ input[type="checkbox"] { accent-color: var(--mr-mid) !important; }
    ALERTAS
    ============================================================ */
 .hl_login .alert { color: #1a1a1a !important; }
+
+[role="menu"].bg-white,
+div[data-v-f909ff34][role="menu"],
+.topmenu-nav div[role="menu"],
+[role="menu"] {
+    background-color: var(--mr-dark) !important;
+    background: var(--mr-dark) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    border: 1px solid rgba(154, 170, 187, 0.3) !important;
+}
+
+[role="menu"] a,
+[role="menu"] [role="menuitem"],
+[role="menu"] span,
+[role="menu"] * {
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+[role="menu"] a:hover,
+[role="menu"] [role="menuitem"]:hover {
+    background-color: rgba(154, 170, 187, 0.1) !important;
+    color: #ffffff !important;
+}
+
+[role="menu"] svg path,
+[role="menu"] i {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+}
