@@ -1,13 +1,6 @@
 {
   "clients": [
     {
-      "accountId": "xbYIUvFHiWRsrcQ4hMDf",
-      "locationId": "xbYIUvFHiWRsrcQ4hMDf",
-      "theme": 3,
-      "themeName": "Dark Navy",
-      "timestamp": "2026-05-18T23:06:20.183Z"
-    },
-    {
       "accountId": "2TfXbAOeK6u3SCNIheun",
       "locationId": "2TfXbAOeK6u3SCNIheun",
       "theme": 3,
