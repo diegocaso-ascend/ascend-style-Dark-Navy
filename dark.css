@@ -1,12 +1,12 @@
 /* ============================================================
-   ASCEND DARK NAVY THEME (AZUL MARINO)
-   Paleta: Azul marino oscuro con acentos azul grisáceo
+   ASCEND DARK NAVY THEME v2
+   Paleta: #252440 base con acentos azul grisáceo
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --mr-dark:   #1E2235;
+  --mr-dark:   #252440;
   --mr-mid:    #7A8BA5;
   --mr-light:  #9AAABB;
   --mr-pale:   #EEF1F5;
@@ -78,7 +78,7 @@ select.removeShadow,
 }
 
 .hl_login .card {
-    background-color: rgba(30, 34, 53, 0.75) !important;
+    background-color: rgba(37, 36, 64, 0.85) !important;
     backdrop-filter: blur(20px) !important;
     border: 1px solid rgba(154, 170, 187, 0.2) !important;
     border-radius: 20px !important;
@@ -89,7 +89,7 @@ select.removeShadow,
 .hl_login label,
 .hl_login p,
 .hl_login a,
-.hl_login span { color: var(--mr-pale) !important; }
+.hl_login span { color: #ffffff !important; }
 
 .hl_login h2 {
     font-size: 0 !important;
@@ -100,7 +100,7 @@ select.removeShadow,
     content: "Ingresa tus datos";
     visibility: visible !important;
     font-size: 26px !important;
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
     display: block !important;
     font-weight: 700 !important;
 }
@@ -110,9 +110,9 @@ select.removeShadow,
 
 .hl_login .form-control,
 .hl_login input:not([type="radio"]) {
-    background-color: rgba(30, 34, 53, 0.6) !important;
+    background-color: rgba(37, 36, 64, 0.6) !important;
     border: 1px solid rgba(154, 170, 187, 0.25) !important;
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
     border-radius: 10px !important;
     height: 48px !important;
 }
@@ -128,7 +128,7 @@ select.removeShadow,
     background: var(--mr-mid) !important;
     border: 2px solid var(--mr-mid) !important;
     border-radius: 10px !important;
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
     font-weight: 700 !important;
     height: 50px !important;
     transition: all 0.25s ease !important;
@@ -142,7 +142,7 @@ select.removeShadow,
 
 #wl_google_login_button {
     background-color: var(--mr-pale) !important;
-    border: 1px solid rgba(30, 34, 53, 0.2) !important;
+    border: 1px solid rgba(37, 36, 64, 0.2) !important;
     border-radius: 10px !important;
     height: 48px !important;
     margin-top: 25px !important;
@@ -164,7 +164,7 @@ select.removeShadow,
     visibility: visible !important;
 }
 #forgot_passowrd_btn:hover::after {
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
     text-decoration: underline !important;
 }
 
@@ -193,7 +193,7 @@ select.removeShadow,
 #sidebar-v2 .default-bg-color,
 .lead-connector {
     background-color: var(--mr-dark) !important;
-    border-right: 1px solid rgba(154, 170, 187, 0.1) !important;
+    border-right: 1px solid rgba(154, 170, 187, 0.15) !important;
 }
 
 #sidebar-v2 ::-webkit-scrollbar,
@@ -211,7 +211,7 @@ select.removeShadow,
 
 #backButtonv2 {
     background-color: rgba(154, 170, 187, 0.07) !important;
-    border: 1px solid rgba(154, 170, 187, 0.15) !important;
+    border: 1px solid rgba(154, 170, 187, 0.2) !important;
     border-radius: 8px !important;
     margin-bottom: 10px !important;
     transition: all 0.25s ease !important;
@@ -220,32 +220,31 @@ select.removeShadow,
     background-color: var(--mr-pale) !important;
     border-color: var(--mr-pale) !important;
 }
-#backButtonv2 i, #backButtonv2 span { color: var(--mr-light) !important; transition: color 0.25s ease !important; }
+#backButtonv2 i, #backButtonv2 span { color: #ffffff !important; transition: color 0.25s ease !important; }
 #backButtonv2:hover i, #backButtonv2:hover span { color: var(--mr-dark) !important; }
 
 #sidebar-v2 .menu-title {
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
     font-weight: 800 !important;
-    border-bottom: 1px solid rgba(154, 170, 187, 0.15) !important;
+    border-bottom: 1px solid rgba(154, 170, 187, 0.2) !important;
     padding-bottom: 10px !important;
     margin-bottom: 10px !important;
 }
 
-/* LOCATION SWITCHER — solo borde más grueso en hover, sin cambio de fondo */
 #location-switcher-sidbar-v2 {
     background-color: rgba(154, 170, 187, 0.04) !important;
-    border: 1px solid rgba(154, 170, 187, 0.15) !important;
+    border: 1px solid rgba(154, 170, 187, 0.25) !important;
     border-radius: 10px !important;
     transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
 #location-switcher-sidbar-v2:hover {
     background-color: rgba(154, 170, 187, 0.04) !important;
-    border: 2px solid rgba(154, 170, 187, 0.5) !important;
-    box-shadow: 0 2px 8px rgba(154, 170, 187, 0.1) !important;
+    border: 2px solid rgba(154, 170, 187, 0.6) !important;
+    box-shadow: 0 2px 8px rgba(154, 170, 187, 0.15) !important;
 }
 #location-switcher-sidbar-v2 span,
 #location-switcher-sidbar-v2 i,
-#location-switcher-sidbar-v2 div { color: var(--mr-pale) !important; }
+#location-switcher-sidbar-v2 div { color: #ffffff !important; }
 
 /* NAV LINKS */
 #sidebar-v2 nav a {
@@ -257,18 +256,16 @@ select.removeShadow,
 
 #sidebar-v2 nav a span,
 #sidebar-v2 nav a i {
-    color: var(--mr-light) !important;
+    color: #ffffff !important;
     transition: all 0.25s ease !important;
 }
 
-/* SVGs e íconos — visibles en estado normal */
 #sidebar-v2 nav a svg,
 #sidebar-v2 nav a img {
-    filter: brightness(0) invert(0.65) !important;
+    filter: brightness(0) invert(1) !important;
     transition: filter 0.25s ease !important;
 }
 
-/* HOVER — fondo claro, texto e íconos oscuros */
 #sidebar-v2 nav a:hover {
     background-color: var(--mr-pale) !important;
     border-left-color: var(--mr-mid) !important;
@@ -284,7 +281,6 @@ select.removeShadow,
     filter: brightness(0) !important;
 }
 
-/* ACTIVO */
 #sidebar-v2 nav a.active,
 #sidebar-v2 nav a.exact-active {
     background-color: var(--mr-pale) !important;
@@ -305,7 +301,6 @@ select.removeShadow,
     filter: brightness(0) !important;
 }
 
-/* BOTÓN COLAPSAR SIDEBAR — de verde a gris de paleta */
 .hl_collapse-button,
 button[aria-label="Expand sidebar"],
 button[aria-label="Collapse sidebar"] {
@@ -316,7 +311,7 @@ button[aria-label="Collapse sidebar"] {
 .hl_collapse-button i,
 button[aria-label="Expand sidebar"] i,
 button[aria-label="Collapse sidebar"] i {
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
 }
 .hl_collapse-button:hover,
 button[aria-label="Expand sidebar"]:hover,
@@ -335,17 +330,20 @@ button[aria-label="Collapse sidebar"]:hover i {
    ============================================================ */
 .hl_v2-location_switcher {
     background-color: var(--mr-dark) !important;
-    border: 1px solid rgba(122, 139, 165, 0.3) !important;
+    border: 2px solid rgba(154, 170, 187, 0.4) !important;
     border-radius: 10px !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
+    max-height: 60vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
 }
 
 .hl_v2_tip-arrow { display: none !important; }
 
 .hl_v2-location_switcher .search-area input[type="search"] {
     background-color: rgba(154, 170, 187, 0.06) !important;
-    border: 1px solid rgba(154, 170, 187, 0.15) !important;
-    color: var(--mr-pale) !important;
+    border: 2px solid rgba(154, 170, 187, 0.25) !important;
+    color: #ffffff !important;
     border-radius: 8px !important;
 }
 .hl_v2-location_switcher .search-area input[type="search"]:focus {
@@ -353,23 +351,21 @@ button[aria-label="Collapse sidebar"]:hover i {
     outline: none !important;
 }
 .hl_v2-location_switcher .search-area input[type="search"]::placeholder {
-    color: rgba(154, 170, 187, 0.5) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .hl_swicher-heading {
-    color: var(--mr-light) !important;
+    color: #ffffff !important;
     font-weight: 800 !important;
-    border-bottom: 1px solid rgba(122, 139, 165, 0.2) !important;
+    border-bottom: 2px solid rgba(154, 170, 187, 0.3) !important;
 }
 
-/* Textos del dropdown — claros por defecto */
-.hl_v2-location_switcher * { color: var(--mr-pale) !important; }
+.hl_v2-location_switcher * { color: #ffffff !important; }
 
-/* CUENTAS — hover solo borde más grueso, sin cambio de fondo a blanco */
 .hl_account {
     border-radius: 8px !important;
     padding: 8px !important;
-    border: 1px solid rgba(154, 170, 187, 0.1) !important;
+    border: 2px solid rgba(154, 170, 187, 0.25) !important;
     margin-bottom: 6px !important;
     display: flex !important;
     align-items: center !important;
@@ -377,12 +373,11 @@ button[aria-label="Collapse sidebar"]:hover i {
 }
 .hl_account:hover {
     background: rgba(154, 170, 187, 0.08) !important;
-    border: 2px solid rgba(154, 170, 187, 0.5) !important;
+    border: 2px solid rgba(154, 170, 187, 0.65) !important;
     transform: translateX(3px) !important;
-    box-shadow: 0 2px 8px rgba(154, 170, 187, 0.1) !important;
+    box-shadow: 0 2px 8px rgba(154, 170, 187, 0.15) !important;
 }
 
-/* Forzar textos claros en hover — NO oscuros */
 .hl_account:hover *,
 .hl_account:hover .hl_location-recent,
 .hl_account:hover .hl_location-title,
@@ -390,28 +385,27 @@ button[aria-label="Collapse sidebar"]:hover i {
 .hl_account:hover div,
 .hl_account:hover p,
 .hl_account:hover i {
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
 }
 
 .hl_location-recent,
 .hl_location-title {
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
     font-weight: 700 !important;
 }
 
 .hl_account .bg-gray-200 {
     background-color: rgba(122, 139, 165, 0.2) !important;
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
     border: 1px solid rgba(122, 139, 165, 0.4) !important;
 }
 
-/* BOTÓN CAMBIAR A VISTA DE AGENCIA */
 .hl_v2-location_switcher div.cursor-pointer {
     transition: background 0.2s ease, border-color 0.2s ease !important;
     border-radius: 8px !important;
     padding: 8px 12px !important;
     margin-bottom: 8px !important;
-    border: 1px solid rgba(154, 170, 187, 0.15) !important;
+    border: 1px solid rgba(154, 170, 187, 0.2) !important;
 }
 .hl_v2-location_switcher div.cursor-pointer:hover {
     background: rgba(154, 170, 187, 0.1) !important;
@@ -420,7 +414,7 @@ button[aria-label="Collapse sidebar"]:hover i {
 .hl_v2-location_switcher div.cursor-pointer *,
 .hl_v2-location_switcher div.cursor-pointer.font-medium,
 .hl_v2-location_switcher div.cursor-pointer.font-medium * {
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
 }
 
 /* ============================================================
@@ -428,7 +422,7 @@ button[aria-label="Collapse sidebar"]:hover i {
    ============================================================ */
 .hl_header {
     background-color: var(--mr-dark) !important;
-    border-bottom: 1px solid rgba(154, 170, 187, 0.1) !important;
+    border-bottom: 1px solid rgba(154, 170, 187, 0.15) !important;
 }
 
 .hl_header .btn-circle,
@@ -443,7 +437,6 @@ button[aria-label="Collapse sidebar"]:hover i {
     --tw-ring-offset-shadow: 0 0 #0000 !important;
 }
 
-/* TELÉFONO */
 .hl_header button[aria-label="Llamada de voz"],
 .hl_header button.bg-success-600 {
     background: var(--mr-mid) !important;
@@ -454,8 +447,8 @@ button[aria-label="Collapse sidebar"]:hover i {
 }
 .hl_header button[aria-label="Llamada de voz"] svg,
 .hl_header button.bg-success-600 svg {
-    color: var(--mr-pale) !important;
-    stroke: var(--mr-pale) !important;
+    color: #ffffff !important;
+    stroke: #ffffff !important;
 }
 .hl_header button[aria-label="Llamada de voz"]:hover,
 .hl_header button.bg-success-600:hover {
@@ -494,13 +487,13 @@ button[aria-label="Collapse sidebar"]:hover i {
 .hl_header .btn-circle:not(#hl_header--copilot-icon) i,
 .hl_header .feedback-toggle-icon,
 #hl_header--help-icon i {
-    color: var(--mr-pale) !important;
-    fill: var(--mr-pale) !important;
+    color: #ffffff !important;
+    fill: #ffffff !important;
 }
 .hl_header .btn-circle:not(#hl_header--copilot-icon) svg path,
 .hl_header button.rounded-full svg path {
-    fill: var(--mr-pale) !important;
-    stroke: var(--mr-pale) !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
 }
 
 .hl_header .btn-circle:not(#hl_header--copilot-icon):hover,
@@ -510,7 +503,7 @@ button[aria-label="Collapse sidebar"]:hover i {
     background: var(--mr-pale) !important;
     background-color: var(--mr-pale) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 4px 14px rgba(30, 34, 53, 0.25) !important;
+    box-shadow: 0 4px 14px rgba(37, 36, 64, 0.25) !important;
 }
 .hl_header .btn-circle:not(#hl_header--copilot-icon):hover i,
 .hl_header .feedback-toggle-btn:hover .feedback-toggle-icon {
@@ -529,7 +522,6 @@ button[aria-label="Collapse sidebar"]:hover i {
 }
 #hl_header--help-icon:hover i { color: var(--mr-dark) !important; }
 
-/* COPILOT — preservar gradiente SVG */
 .hl_header #hl_header--copilot-icon,
 #hl_header--copilot-icon[style] {
     background: transparent !important;
@@ -585,7 +577,7 @@ button[aria-label="Collapse sidebar"]:hover i {
 }
 .hl_header .avatar .avatar_img {
     background-color: var(--mr-mid) !important;
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
     border-radius: 50% !important;
     border: none !important;
     transition: all 0.25s ease !important;
@@ -615,13 +607,17 @@ button[aria-label="Collapse sidebar"]:hover i {
 /* ============================================================
    PESTAÑAS
    ============================================================ */
-.topmenu-navitem span { color: var(--mr-light) !important; }
-.topmenu-navitem:not(.active):hover span { color: var(--mr-pale) !important; }
-.topmenu-navitem.active { border-bottom-color: var(--mr-light) !important; }
-.topmenu-navitem.active span { color: var(--mr-pale) !important; }
+.topmenu-navtitle {
+    color: #ffffff !important;
+}
 
-.n-tabs-tab:not(.n-tabs-tab--active):hover .n-tabs-tab__label { color: var(--mr-pale) !important; }
-.n-tabs-tab--active .n-tabs-tab__label { color: var(--mr-pale) !important; }
+.topmenu-navitem span { color: #ffffff !important; }
+.topmenu-navitem:not(.active):hover span { color: #ffffff !important; }
+.topmenu-navitem.active { border-bottom-color: var(--mr-light) !important; }
+.topmenu-navitem.active span { color: #ffffff !important; }
+
+.n-tabs-tab:not(.n-tabs-tab--active):hover .n-tabs-tab__label { color: #ffffff !important; }
+.n-tabs-tab--active .n-tabs-tab__label { color: #ffffff !important; }
 .n-tabs-bar { background-color: var(--mr-light) !important; }
 
 /* ============================================================
@@ -640,7 +636,7 @@ input[type="checkbox"] { accent-color: var(--mr-mid) !important; }
 .n-button--primary-type {
     background-color: var(--mr-mid) !important;
     border-color: var(--mr-mid) !important;
-    color: var(--mr-pale) !important;
+    color: #ffffff !important;
 }
 .n-button--primary-type:hover {
     background-color: var(--mr-pale) !important;
@@ -651,12 +647,12 @@ input[type="checkbox"] { accent-color: var(--mr-mid) !important; }
    BUSCADOR GLOBAL Y QUICK ACTIONS
    ============================================================ */
 #globalSearchOpener {
-    background-color: rgba(30, 34, 53, 0.8) !important;
+    background-color: rgba(37, 36, 64, 0.8) !important;
     border: 1px solid rgba(122, 139, 165, 0.35) !important;
     border-radius: 8px !important;
 }
 #globalSearchOpener:hover { border-color: var(--mr-light) !important; }
-#globalSearchOpener .search-placeholder { color: var(--mr-light) !important; }
+#globalSearchOpener .search-placeholder { color: #ffffff !important; }
 
 #quickActions {
     background-color: var(--mr-mid) !important;
@@ -670,28 +666,3 @@ input[type="checkbox"] { accent-color: var(--mr-mid) !important; }
    ALERTAS
    ============================================================ */
 .hl_login .alert { color: #1a1a1a !important; }
-
-/* ============================================================
-   FIX: SUBMENÚ CUENTAS — evitar desbordamiento
-   ============================================================ */
-.hl_v2-location_switcher {
-    max-height: calc(100vh - 80px) !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-}
-
-.hl_v2-location_switcher .hl_swicher-list,
-.hl_v2-location_switcher [class*="list"],
-.hl_v2-location_switcher [class*="accounts"] {
-    max-height: calc(100vh - 180px) !important;
-    overflow-y: auto !important;
-}
-
-/* ============================================================
-   FIX: SUBMENÚ CUENTAS — altura controlada
-   ============================================================ */
-.hl_v2-location_switcher {
-    max-height: 60vh !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-}
